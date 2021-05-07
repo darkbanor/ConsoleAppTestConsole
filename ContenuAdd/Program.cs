@@ -9,7 +9,7 @@ namespace ContenuAdd
             //valeur de a et de b
             int a=5;
             int b=8;
-            int c=a;
+          
 
             // lire valeur a
             Console.WriteLine("Valeur de a : "+a);
@@ -18,6 +18,7 @@ namespace ContenuAdd
             Console.WriteLine("Valeur de a : " +b);
 
             //transfert valeur
+            int c = a;
             a = b;
             b = c;
 
