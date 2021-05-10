@@ -33,6 +33,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "equationResolution", "equat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "resolutionEq_methode", "resolutionEq_methode\resolutionEq_methode.csproj", "{462D52D7-50AA-4C78-B032-B43D5E4AF0F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methode_learning", "Methode_learning\Methode_learning.csproj", "{648B2D59-415B-4FF9-B75E-FEB4BF89DFBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JourSemaine", "JourSemaine\JourSemaine.csproj", "{2F6852B0-3B2D-46F6-8BAB-CD3C9A2C90CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,14 @@ Global
 		{462D52D7-50AA-4C78-B032-B43D5E4AF0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{462D52D7-50AA-4C78-B032-B43D5E4AF0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{462D52D7-50AA-4C78-B032-B43D5E4AF0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{648B2D59-415B-4FF9-B75E-FEB4BF89DFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{648B2D59-415B-4FF9-B75E-FEB4BF89DFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{648B2D59-415B-4FF9-B75E-FEB4BF89DFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{648B2D59-415B-4FF9-B75E-FEB4BF89DFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6852B0-3B2D-46F6-8BAB-CD3C9A2C90CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6852B0-3B2D-46F6-8BAB-CD3C9A2C90CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6852B0-3B2D-46F6-8BAB-CD3C9A2C90CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6852B0-3B2D-46F6-8BAB-CD3C9A2C90CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

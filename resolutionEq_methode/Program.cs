@@ -13,7 +13,7 @@ namespace resolutionEq_methode
             Console.WriteLine(" Resolutoin d'équation (a * x + b = 0) --> x = -b/a");
             Console.WriteLine(" ");
 
-            // convertion du string en valeur int
+            // saisie + convertion du string en valeur int
             Console.Write("Entre un nombre pour a: ");
             a = Convert.ToDouble(Console.ReadLine());
 
