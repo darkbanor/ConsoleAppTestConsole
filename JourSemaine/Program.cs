@@ -19,6 +19,8 @@ namespace JourSemaine
             int resultat4, reste7=0;
             int valeurMois = 0;
             string jourSem = "";
+            //pour test
+            double divi = 0;
 
             // valeur moisassignation tableau
             const int mars = 4, avril = 0, mai = 2, juin = 5, juillet = 0, aout = 3, septembre = 6, octobre = 1, novembre = 4, decembre = 6;
@@ -33,17 +35,17 @@ namespace JourSemaine
 
             do
             {
-                Console.Write(" quel jour ? :");
+                Console.Write(" Entrez le jour : ");
                 jour = int.Parse(Console.ReadLine());
 
                 if (jour <= 0 || jour >= 31)
-                    Console.WriteLine(" entree incorrecte ");
+                    Console.WriteLine("Entree incorrecte ");
 
             } while (jour <= 0 || jour >= 31);
 
             do
             {
-                Console.Write(" quel mois ? :");
+                Console.Write("Entrez le mois : ");
                 mois = int.Parse(Console.ReadLine());
 
                 if (mois < 1 || mois >= 12)
@@ -51,9 +53,10 @@ namespace JourSemaine
 
             } while (mois < 1 || mois >= 12);
 
+
             do
             {
-                Console.Write(" quel annee ? :");
+                Console.Write(" Entrez le annee : ");
                 annee = int.Parse(Console.ReadLine());
 
                 if (annee < 0 || annee >= 99)
@@ -72,74 +75,68 @@ namespace JourSemaine
 
            
             if (mois == 1)
-            { 
-
-                    if (mois == 1)
-                    {
-                        if (annee % 4 == 0)
-                            janvier = 0;
-                        else
-                            janvier = 1;
-                    }   
+            {                    
+                     if (annee % 4 == 0)
+                     janvier = 0; // bissextile
+                     else
+                     janvier = 1;
+                      
                 valeurMois = janvier;
             }
-
-            if (mois == 2)
+            else if (mois == 2)
             {
                     if (annee % 4 == 0)                   
-                    fevrier = 3;               
+                    fevrier = 3;  // bissextile             
                     else               
                     fevrier = 4;
                
                 valeurMois = fevrier;
             }
-
-            if (mois == 3)
+            else if (mois == 3)
             {
                 valeurMois = mars;
             }
-
-            if (mois == 4)
+            else if (mois == 4)
             {
                 valeurMois = avril;
             }
 
-            if (mois == 5)
+            else if (mois == 5)
             {
                 valeurMois = mai;
             }
 
-            if (mois == 6)
+            else if (mois == 6)
             {
                 valeurMois = juin;
             }
 
-            if (mois == 7)
+            else if (mois == 7)
             {
                 valeurMois = juillet;
             }
 
-            if (mois == 8)
+            else if (mois == 8)
             {
                 valeurMois = aout;
             }
 
-            if (mois == 9)
+            else if (mois == 9)
             {
                 valeurMois = septembre;
             }
 
-            if (mois == 10)
+            else if (mois == 10)
             {
                 valeurMois = octobre;
             }
 
-            if (mois == 11)
+            else if (mois == 11)
             {
                 valeurMois = novembre;
             }
 
-            if (mois == 12)
+            else if (mois == 12)
             {
                 valeurMois = decembre;
             }
@@ -148,40 +145,42 @@ namespace JourSemaine
 
             // calcul reste7
             reste7 = ((annee + resultat4 + valeurMois + jour) % 7) ;
+            //divi = ((annee + resultat4 + valeurMois + jour) / 7) ;
+            
 
             // calcul du jour de la semaine
-            
+
             if (reste7 == 1)
             {
                 jourSem = "dimanche";
             }
 
-            if (reste7 == 2)
+            else if (reste7 == 2)
             {
                 jourSem = "lundi";
             }
 
-            if (reste7 == 3)
+            else if (reste7 == 3)
             {
                 jourSem = "mardi";
             }
 
-            if (reste7 == 4)
+            else if (reste7 == 4)
             {
                 jourSem = "mercredi";
             }
 
-            if (reste7 == 5)
+            else if (reste7 == 5)
             {
                 jourSem = "jeudi";
             }
 
-            if (reste7 == 6)
+            else if (reste7 == 6)
             {
                 jourSem = "vendredi";
             }
 
-            if (reste7 == 0)
+            else if (reste7 == 0)
             {
                 jourSem = "samedi";
             }
@@ -191,21 +190,20 @@ namespace JourSemaine
             Console.WriteLine(jourSem);
 
             //debug
-            //Console.WriteLine(" ------------------------------ debug ------------ ");
-            //Console.WriteLine("jour= " +jour+ " mois="+mois+" annee="+annee);
-            //Console.WriteLine("resultat4= " + resultat4);
-            //Console.WriteLine("resultat4 % 4= " + (resultat4 % 4));
-            //Console.WriteLine("valeurMois= " + valeurMois);
-            //Console.WriteLine("janvier= " + janvier);            
-            //Console.WriteLine("fevrier= " + fevrier);
-            //Console.WriteLine("reste7= " + reste7);
-            //Console.WriteLine("joursem= " + jourSem);
-            
+            Console.WriteLine(" ------------------------------ debug ------------ ");
+            Console.WriteLine("jour= " + jour + " mois=" + mois + " annee=" + annee);
+            Console.WriteLine("resultat4= " + resultat4);
+            Console.WriteLine("resultat4 % 4= " + (resultat4 % 4));
+            Console.WriteLine("valeurMois= " + valeurMois);
+            Console.WriteLine("janvier= " + janvier);
+            Console.WriteLine("fevrier= " + fevrier);
+            Console.WriteLine("reste7= " + reste7);
+            Console.WriteLine("division reste7= " + divi);
+            Console.WriteLine("joursem= " + jourSem);
+
 
             Console.ReadKey();
-        }
-
+        }       
        
-
     }
 }
