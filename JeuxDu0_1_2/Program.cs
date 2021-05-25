@@ -7,64 +7,61 @@ namespace JeuxDu0_1_2
         static void Main(string[] args)
         {
             //variable
-            int nombre;
+            int NombreJoueur;
             int scoreUser=0, scoreOrdi=0;
             string userInputa;
 
             Random aleatoire = new Random();
-            int n = aleatoire.Next(0, 2); // nombre aleatoire de l'ordi
-            int Nbcoup = 1;
-
+            int ordi = aleatoire.Next(0, 2); // nombre aleatoire de l'ordi
+            
             //saisie
             Console.WriteLine("------ Jeux du 0_1_2 -------");
+
+
             do
             {
-                Console.Write(" Manche " + Nbcoup);
+
                 Console.WriteLine(" ");
                 Console.Write(" Entrez un nombre entre 0 et 2 : ");
                 userInputa = Console.ReadLine();
 
-                bool result = Int32.TryParse(userInputa, out nombre);
+                bool result = Int32.TryParse(userInputa, out NombreJoueur);
 
                 if (result)
                 {
-                    nombre = Convert.ToInt16(userInputa);
-                    if (nombre < 0 || nombre > 2)
-                        Console.WriteLine("Tu n'as pas rentre 0, 1 ou 2");
+                    NombreJoueur = Convert.ToInt16(userInputa);
+                    if (NombreJoueur < 0 || NombreJoueur > 2)
+                        Console.WriteLine("Tu n'as pas rentre 0, 1 ou 2 programme arrete");
 
-                    else if ((nombre-n) == 0)
+                    else if (NombreJoueur > ordi) 
                     {
-                        scoreUser = 0;
-                        scoreOrdi = 0;
+                        if ((NombreJoueur - ordi) == 1)
+                        {                           
+                           scoreOrdi++;                           
+                        }
+                        else if ((NombreJoueur - ordi) == 2)
+                        {
+                            scoreUser++;
+                        }
                     }
 
-                    else if ((nombre-n) == 1)
+                    else if (ordi > NombreJoueur)
                     {
-                        if (nombre < n)
+                        if ((ordi - NombreJoueur) == 1)
                         {
-                            scoreUser = 1;
-                            scoreOrdi = 0;
+                            scoreUser++;
                         }
-                        else
+                        else if ((ordi - NombreJoueur) == 2)
                         {
-                            scoreUser = 0;
-                            scoreOrdi = 1;
-                        }                            
+                            scoreOrdi++;
+                        }
                     }
 
-                    else if ((nombre-n) == 2)
-                    {
-                        if (nombre > n)
-                        {
-                            scoreUser = 1;
-                            scoreOrdi = 0;
-                        }
-                        else
-                        {
-                            scoreUser = 0;
-                            scoreOrdi = 1;
-                        }
-                    }                    
+                    //affichage resultat
+                    Console.WriteLine("score User = " + scoreUser + " score ordi = " + scoreOrdi);
+                    Console.WriteLine("nombreJoueur = " + NombreJoueur + " ordi = " + ordi);
+                    Console.WriteLine("nombreJoueur - ordi = " + (NombreJoueur  -ordi));
+                    Console.WriteLine("ordi - nombreJoueur " + (ordi - NombreJoueur));
 
                 }
                 else
@@ -72,24 +69,24 @@ namespace JeuxDu0_1_2
                     Console.WriteLine("Les lettre ne sont pas accepte recommence ");
                 }
 
-                // affichage du score
-                Console.WriteLine("score User " + scoreUser);
-                Console.WriteLine("score User " + scoreOrdi);
-
-
-                Nbcoup++;
-            } while (Nbcoup != 11);
+            } while (scoreUser == 10 && scoreOrdi == 10);
 
 
             //affichage
-            Console.Write("L'ordinateur a gagner ");
-            Console.WriteLine("Bravo tu as gagne ");
+            if (scoreUser == 10)
+            {
+                Console.WriteLine("Bravo tu as gagne ");
+            }
+            else
+            {
+                Console.Write("L'ordinateur a gagner ");
+            }
 
             //fin programme
             Console.WriteLine(" ");
             Console.WriteLine("Fin programme");
-            Console.ReadLine();
-            Console.WriteLine("Hello World!");
+            Console.ReadLine();            
         }
+        
     }
 }
