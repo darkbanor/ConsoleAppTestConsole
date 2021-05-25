@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="C:\Users\Stagiaire.DESKTOP-3NO8MF4\OneDrive\prog_sphere.cs" Link="prog_sphere.cs" />
-  </ItemGroup>
-
 </Project>
