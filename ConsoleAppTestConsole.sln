@@ -59,6 +59,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarnabeCourse", "BarnabeCou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeuxDu0_1_2", "JeuxDu0_1_2\JeuxDu0_1_2.csproj", "{1AAD7032-C8CE-46A9-94E8-08BD76D68174}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ex page 13", "ex page 13", "{BA50F17B-0440-48D6-ACF5-8EBDD038D8C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbTableau", "NbTableau\NbTableau.csproj", "{584F9BCC-A759-4447-8860-8E67289BDB28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +165,10 @@ Global
 		{1AAD7032-C8CE-46A9-94E8-08BD76D68174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAD7032-C8CE-46A9-94E8-08BD76D68174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAD7032-C8CE-46A9-94E8-08BD76D68174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584F9BCC-A759-4447-8860-8E67289BDB28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584F9BCC-A759-4447-8860-8E67289BDB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584F9BCC-A759-4447-8860-8E67289BDB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584F9BCC-A759-4447-8860-8E67289BDB28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
